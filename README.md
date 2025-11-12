@@ -38,8 +38,9 @@ Incluye:
 ### Resumen Ejecutivo
 - **Inicio:** 9:30 AM
 - **Locaciones:** 4 (Casa novio, Casa novia, Templo, Salón)
-- **Duración Total:** ~9 horas
+- **Duración Total:** ~9.5 horas
 - **Tiempo Total de Traslados:** 77 minutos
+- **Sesión Fotográfica Exterior:** 20 minutos adicionales
 
 ### Desglose de Tiempos
 
@@ -51,12 +52,13 @@ Incluye:
 | 11:50 AM - 12:25 PM | Traslado | 33 min | → Templo |
 | 12:25 PM - 1:00 PM | Pre-Ceremonia | 35 min | Templo Expiatorio |
 | 1:00 PM - 2:00 PM | Ceremonia Religiosa | 1 hora | Templo Expiatorio |
-| 2:00 PM - 2:25 PM | Traslado | 25 min | → Salón |
-| 2:25 PM - ~6:30 PM | Recepción y Fiesta | 4+ horas | Salón El Nacimiento |
+| 2:00 PM - 2:20 PM | Sesión Fotográfica Exterior | 20 min | Templo Expiatorio (afuera) |
+| 2:20 PM - 2:45 PM | Traslado | 25 min | → Salón |
+| 2:45 PM - ~7:00 PM | Recepción y Fiesta | 4+ horas | Salón El Nacimiento |
 
 ### Momentos Clave en la Recepción
-- 2:30 PM - Recepción y Cóctel
-- 3:00 PM - Comida y Mariachi
+- 2:45 PM - Recepción y Cóctel
+- 3:15 PM - Comida y Mariachi
 - 5:00 PM - Música Norteña
 - 7:00 PM - Banda en Vivo
 - **7:30 PM - Vals y Brindis** ⭐ (Momento más importante)
