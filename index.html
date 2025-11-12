@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Juan Manuel & Luz Mariana</title>
+    <meta name="description" content="Celebra con nosotros nuestra boda el 22 de noviembre de 2025">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botón de música flotante -->
+    <button id="music-toggle" class="music-btn" aria-label="Reproducir música">
+        <span class="music-icon">♪</span>
+    </button>
+
+    <!-- Audio de fondo -->
+    <audio id="background-music" loop>
+        <source src="music/boda-cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sección de portada -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="subtitle">Nuestra Boda</p>
+            <h1 class="names">
+                <span class="name">Juan Manuel</span>
+                <span class="ampersand">&</span>
+                <span class="name">Luz Mariana</span>
+            </h1>
+            <p class="tagline">Reproduce y desliza</p>
+            <div class="scroll-indicator">
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de historia -->
+    <section class="story">
+        <div class="container">
+            <p class="story-text">
+                Tenemos tiempo compartiendo una hermosa etapa.
+                <br><br>
+                Hemos aprendido a conocernos, hemos superado dificultades y nuestro amor
+                se ha ido haciendo cada vez más intenso es por eso que nos ha llevado a
+                tomar la decisión de formar nuestra propia familia con la bendición de Dios.
+                <br><br>
+                <strong>Queremos celebrar con ustedes nuestros seres queridos y amigos
+                este día tan especial.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de padres -->
+    <section class="parents">
+        <div class="container">
+            <h2 class="section-title">En compañía de<br>nuestros Padres:</h2>
+            <div class="parents-grid">
+                <div class="parent-group">
+                    <p class="parent-name">Jesús Muñoz</p>
+                    <span class="parent-separator">&</span>
+                    <p class="parent-name">María de la Luz Solís</p>
+                </div>
+                <div class="parent-group">
+                    <p class="parent-name">Antonio Muñoz</p>
+                    <span class="parent-separator">&</span>
+                    <p class="parent-name">Martina Muñoz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de fecha -->
+    <section class="date-section">
+        <div class="container">
+            <h2 class="section-title-alt">– Día –</h2>
+            <div class="date-display">
+                <p class="day">SÁBADO</p>
+                <p class="full-date">22-NOVIEMBRE-2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador regresivo -->
+    <section class="countdown">
+        <div class="container">
+            <h3 class="countdown-title">Faltan</h3>
+            <div class="countdown-timer">
+                <div class="time-unit">
+                    <span id="days" class="time-value">0</span>
+                    <span class="time-label">DÍAS</span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours" class="time-value">0</span>
+                    <span class="time-label">HORAS</span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes" class="time-value">0</span>
+                    <span class="time-label">MINUTOS</span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds" class="time-value">0</span>
+                    <span class="time-label">SEGUNDOS</span>
+                </div>
+            </div>
+            <p class="countdown-subtitle">Para el gran día</p>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Juan+Manuel+y+Luz+Mariana&dates=20251122T190000Z/20251122T240000Z&details=Celebraci%C3%B3n+de+nuestra+boda&location=Templo+Expiatorio,+Le%C3%B3n,+Guanajuato" target="_blank" class="btn btn-primary">GUARDAR DÍA</a>
+            <p class="invitation-text">¡Te esperamos!</p>
+        </div>
+    </section>
+
+    <!-- Ceremonia -->
+    <section class="event-details ceremony">
+        <div class="container">
+            <h2 class="section-title-alt">– Ceremonia –</h2>
+            <p class="event-time">1:00 pm.</p>
+            <h3 class="venue-name">Templo Expiatorio</h3>
+            <p class="venue-address">13 de Septiembre 103, Centro, 37000 León de los Aldama, Gto.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Templo+Expiatorio+13+de+Septiembre+103+Centro+León+Guanajuato" target="_blank" class="btn btn-outline">VER MAPA</a>
+        </div>
+    </section>
+
+    <!-- Recepción -->
+    <section class="event-details reception">
+        <div class="container">
+            <h2 class="section-title-alt">– Recepción –</h2>
+            <p class="event-time">2:30 pm.</p>
+            <h3 class="venue-name">Salón El Nacimiento</h3>
+            <p class="venue-address">El Nacimiento, Guanajuato</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Salón+El+Nacimiento+Guanajuato" target="_blank" class="btn btn-outline">VER MAPA</a>
+        </div>
+    </section>
+
+    <!-- Itinerario -->
+    <section class="itinerary">
+        <div class="container">
+            <h2 class="section-title">– Itinerario –</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Ceremonia</h4>
+                        <p>1:00 pm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Recepción</h4>
+                        <p>2:30 pm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Comida y Mariachi</h4>
+                        <p>3:00 pm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Norteño</h4>
+                        <p>5:00 pm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Banda</h4>
+                        <p>7:00 pm.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Vals y Brindis</h4>
+                        <p>7:30 pm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de confirmación -->
+    <section class="confirmation">
+        <div class="container">
+            <h2 class="section-title">Confirma tu asistencia</h2>
+            <p class="confirmation-text">
+                Por favor confirma tu asistencia antes del 15 de noviembre de 2025
+            </p>
+            <a href="https://wa.me/524776391149?text=Hola%20Mariana,%20confirmo%20mi%20asistencia%20a%20tu%20boda%20🎉" target="_blank" class="btn btn-whatsapp">
+                <span class="whatsapp-icon">📱</span> Confirmar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Información adicional -->
+    <section class="additional-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📋</div>
+                    <h3>Logística</h3>
+                    <p>Información detallada del evento</p>
+                    <a href="logistica.html" class="btn btn-link">Ver detalles</a>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📄</div>
+                    <h3>Contrato</h3>
+                    <p>Servicios de fotografía y video</p>
+                    <a href="contrato.html" class="btn btn-link">Ver contrato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">¡Nos casamos!</p>
+            <p class="footer-names">Juan Manuel & Luz Mariana</p>
+            <p class="footer-date">22 de Noviembre de 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

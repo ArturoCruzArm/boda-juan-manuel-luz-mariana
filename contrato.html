@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Servicios - Boda Juan Manuel & Luz Mariana</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .contract-page {
+            background: var(--white);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .contract-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #6d5940 100%);
+            color: var(--white);
+            margin-bottom: 40px;
+        }
+
+        .contract-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contract-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .contract-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--accent-color);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .contract-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .contract-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+        }
+
+        .contract-content p,
+        .contract-content li {
+            line-height: 1.8;
+            color: var(--text-light);
+            margin: 15px 0;
+        }
+
+        .contract-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contract-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .contract-content ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .contract-content strong {
+            color: var(--text-dark);
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .signature-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .signature-box {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .signature-line {
+            border-bottom: 2px solid var(--text-dark);
+            width: 300px;
+            margin: 30px auto 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .contract-header,
+            .back-btn {
+                display: none;
+            }
+
+            .contract-content {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contract-content {
+                padding: 30px 20px;
+            }
+
+            .contract-header h1 {
+                font-size: 2rem;
+            }
+
+            .contract-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .signature-line {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contract-page">
+        <div class="contract-header">
+            <h1>Contrato de Servicios de Fotografía y Video</h1>
+            <p>Boda de Juan Manuel & Luz Mariana</p>
+        </div>
+
+        <div class="container">
+            <a href="index.html" class="back-btn">← Volver a la invitación</a>
+
+            <div class="contract-content">
+                <p style="text-align: center;"><strong>Fecha:</strong> 3 de octubre de 2025</p>
+
+                <h2>PARTES CONTRATANTES</h2>
+
+                <h3>EL PRESTADOR:</h3>
+                <div class="info-box">
+                    <p><strong>Nombre:</strong> Arturo Cruz</p>
+                    <p><strong>Teléfono:</strong> 477-920-3776</p>
+                    <p><strong>Servicios:</strong> Fotografía y Video para Eventos</p>
+                </div>
+
+                <h3>LA CONTRATANTE:</h3>
+                <div class="info-box">
+                    <p><strong>Nombre:</strong> Luz Mariana Muñoz</p>
+                    <p><strong>Teléfono:</strong> +52 1 477 639 1149</p>
+                    <p><strong>Evento:</strong> Boda de Juan Manuel & Luz Mariana</p>
+                </div>
+
+                <h2>DATOS DEL EVENTO</h2>
+                <div class="info-box">
+                    <p><strong>Tipo de Evento:</strong> Celebración de Boda</p>
+                    <p><strong>Novios:</strong> Juan Manuel & Luz Mariana</p>
+                    <p><strong>Fecha:</strong> 22 de noviembre de 2025</p>
+                    <p><strong>Ceremonia Religiosa:</strong> 1:00 p.m. - Templo Expiatorio</p>
+                    <p><strong>Dirección Ceremonia:</strong> 13 de Septiembre 103, Centro, 37000 León de los Aldama, Gto.</p>
+                    <p><strong>Recepción:</strong> 2:30 p.m. - Salón El Nacimiento</p>
+                    <p><strong>Dirección Recepción:</strong> El Nacimiento, Guanajuato</p>
+                </div>
+
+                <h2>DESCRIPCIÓN DEL SERVICIO CONTRATADO</h2>
+
+                <h3>PAQUETE COMPLETO DE FOTOGRAFÍA Y VIDEO CON DRON</h3>
+
+                <p><strong>Incluye:</strong></p>
+
+                <h3>Cobertura:</h3>
+                <ul>
+                    <li>Sesión fotográfica previa al evento (fecha a coordinar)</li>
+                    <li>Preparativos de novios en casa de los padres del novio</li>
+                    <li>Preparativos de la novia en su domicilio</li>
+                    <li>Ceremonia religiosa en Templo Expiatorio</li>
+                    <li>Recepción y fiesta completa en Salón El Nacimiento</li>
+                    <li>Tomas aéreas con dron de la ceremonia y recepción</li>
+                </ul>
+
+                <h3>Productos Entregables:</h3>
+                <ul>
+                    <li>Película en 4K con duración de 2:00 hrs editada, musicalizada y titulada</li>
+                    <li>Canción personalizada creada especialmente para los novios</li>
+                    <li>Videoclip para proyectar en el salón con fotos de la sesión previa</li>
+                    <li>Todas las fotografías digitales del evento en alta resolución</li>
+                    <li>Fotografías impresas (cantidad a definir)</li>
+                    <li>USB personalizada con caja impresa</li>
+                    <li>Video alojado en plataforma privada de YouTube para compartir con familia</li>
+                    <li>Enlace privado para visualización online</li>
+                </ul>
+
+                <h2>MONTO TOTAL Y FORMA DE PAGO</h2>
+
+                <div class="info-box">
+                    <p><strong>Costo Total del Servicio:</strong> $6,500.00 (Seis mil quinientos pesos 00/100 M.N.)</p>
+                    <br>
+                    <p><strong>Forma de Pago:</strong></p>
+                    <p>• Anticipo para apartado: $500.00 (Quinientos pesos 00/100 M.N.)</p>
+                    <p>• Fecha de pago del anticipo: 3 de octubre de 2025</p>
+                    <p>• Saldo restante: $6,000.00 (Seis mil pesos 00/100 M.N.)</p>
+                    <p>• Fecha de pago del saldo: 22 de noviembre de 2025 (día del evento)</p>
+                    <br>
+                    <p><strong>Datos bancarios para transferencia:</strong></p>
+                    <p>• Banco: BBVA</p>
+                    <p>• Tarjeta: 4152 3137 6890 8985</p>
+                    <p>• Titular: Juan Arturo Cruz</p>
+                </div>
+
+                <h2>OBLIGACIONES DEL PRESTADOR</h2>
+                <ul>
+                    <li>Presentarse puntualmente en los lugares acordados para la cobertura del evento</li>
+                    <li>Proporcionar el equipo profesional necesario, incluyendo dron para tomas aéreas</li>
+                    <li>Crear una canción personalizada basada en la historia de los novios</li>
+                    <li>Entregar los productos fotográficos y audiovisuales en un plazo máximo de 30 días hábiles posteriores al evento</li>
+                    <li>Respaldar el material capturado por un periodo de 60 días después de la entrega</li>
+                    <li>Realizar el trabajo con profesionalismo y la más alta calidad</li>
+                    <li>Proporcionar enlace privado de YouTube para compartir el video con la familia</li>
+                    <li>Entregar todos los productos incluidos en el paquete contratado</li>
+                </ul>
+
+                <h2>OBLIGACIONES DE LA CONTRATANTE</h2>
+                <ul>
+                    <li>Pagar el anticipo acordado en la fecha establecida para confirmar el apartado</li>
+                    <li>Liquidar el saldo restante el día del evento antes o durante la celebración</li>
+                    <li>Proporcionar acceso a todas las locaciones donde se realizará la cobertura</li>
+                    <li>Informar oportunamente sobre cualquier cambio en fecha, horario o locación</li>
+                    <li>Coordinar con el prestador la fecha, hora y lugar de la sesión fotográfica previa</li>
+                    <li>Facilitar la logística necesaria para la proyección del videoclip en el salón</li>
+                    <li>Proporcionar información para la canción personalizada (historia de amor, frases especiales, etc.)</li>
+                    <li>Enviar comprobante de pago en caso de realizar depósito o transferencia</li>
+                </ul>
+
+                <h2>SESIÓN FOTOGRÁFICA PREVIA Y PREPARATIVOS</h2>
+
+                <div class="info-box">
+                    <p><strong>Sesión previa:</strong> Fecha y horario a coordinar con los novios</p>
+                    <p><strong>Preparativos día de la boda:</strong></p>
+                    <p>• Casa de los padres del novio: Ubicación proporcionada</p>
+                    <p>• Casa de la novia: Ubicación proporcionada</p>
+                    <p><strong>Entrega de material:</strong></p>
+                    <p>• Fotografías digitales para selección: 7 días después de la sesión</p>
+                    <p>• Material completo del evento: 30 días hábiles después de la boda</p>
+                </div>
+
+                <h2>CANCIÓN PERSONALIZADA</h2>
+                <p>El prestador creará una canción original personalizada para los novios, basándose en:</p>
+                <ul>
+                    <li>Historia de cómo se conocieron</li>
+                    <li>Momentos especiales de su relación</li>
+                    <li>Votos matrimoniales</li>
+                    <li>Frases o palabras significativas para la pareja</li>
+                    <li>Estilo musical preferido por los novios</li>
+                </ul>
+
+                <h2>CANCELACIONES Y MODIFICACIONES</h2>
+                <ul>
+                    <li>En caso de cancelación por parte de la contratante, el anticipo no será reembolsable</li>
+                    <li>Cambios de fecha: Se aceptarán siempre que se notifiquen con al menos 30 días de anticipación y esté disponible la nueva fecha</li>
+                    <li>Si el prestador no puede cumplir con el servicio, deberá reembolsar el 100% de los pagos realizados</li>
+                    <li>Cambios menores de horario: Deberán notificarse con al menos 7 días de anticipación</li>
+                </ul>
+
+                <h2>CASOS FORTUITOS Y FUERZA MAYOR</h2>
+                <p>En caso de situaciones imprevistas ajenas a ambas partes (fenómenos naturales, emergencias sanitarias, etc.), ambas partes buscarán reprogramar el servicio de mutuo acuerdo.</p>
+
+                <h2>DISPOSICIONES GENERALES</h2>
+                <ul>
+                    <li>El material fotográfico y audiovisual es propiedad del prestador, quien otorga a la contratante el derecho de uso personal</li>
+                    <li>El prestador podrá utilizar el material para promoción de sus servicios en redes sociales y portafolio</li>
+                    <li>No se entregarán archivos en bruto o sin editar</li>
+                    <li>El video será publicado en YouTube como no listado (privado), solo accesible mediante el enlace</li>
+                    <li>Si los novios desean música con derechos de autor en la versión de YouTube, se creará una versión adicional con música libre de derechos</li>
+                    <li>Cualquier servicio adicional no contemplado en este contrato deberá ser acordado y cotizado por separado</li>
+                    <li>Cualquier modificación a este contrato deberá hacerse por escrito y ser firmada por ambas partes</li>
+                </ul>
+
+                <h2>ACEPTACIÓN</h2>
+                <p>Ambas partes manifiestan su conformidad con los términos y condiciones establecidos en el presente contrato.</p>
+
+                <div class="signature-section">
+                    <div class="signature-box">
+                        <p><strong>POR EL PRESTADOR:</strong></p>
+                        <div class="signature-line"></div>
+                        <p>Arturo Cruz</p>
+                        <p>Nombre y Firma</p>
+                        <p>Fecha: _________________</p>
+                    </div>
+
+                    <div class="signature-box">
+                        <p><strong>POR LA CONTRATANTE:</strong></p>
+                        <div class="signature-line"></div>
+                        <p>Luz Mariana Muñoz</p>
+                        <p>Nombre y Firma</p>
+                        <p>Fecha: _________________</p>
+                    </div>
+                </div>
+
+                <div class="info-box" style="margin-top: 40px; background: #f0f9f0; border-left-color: #4CAF50;">
+                    <h3 style="color: #4CAF50; margin-top: 0;">COMPROBANTE DE ANTICIPO</h3>
+                    <p>Recibí la cantidad de <strong>$500.00 (Quinientos pesos 00/100 M.N.)</strong> como anticipo para el apartado de los servicios de fotografía y video para la boda de Juan Manuel & Luz Mariana el día 22 de noviembre de 2025.</p>
+                    <p>Saldo pendiente: <strong>$6,000.00 (Seis mil pesos 00/100 M.N.)</strong> a liquidar el día del evento.</p>
+                    <br>
+                    <div class="signature-line" style="width: 250px; margin: 20px auto;"></div>
+                    <p style="text-align: center;">Arturo Cruz<br>Firma del Prestador</p>
+                    <p style="text-align: center;">Fecha: _________________</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="index.html" class="back-btn">← Volver a la invitación</a>
+                <button onclick="window.print()" class="back-btn" style="margin-left: 10px;">🖨️ Imprimir contrato</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

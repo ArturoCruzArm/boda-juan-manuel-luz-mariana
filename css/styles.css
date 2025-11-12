@@ -1,0 +1,632 @@
+/* Variables de colores */
+:root {
+    --primary-color: #8b7355;
+    --secondary-color: #d4af37;
+    --accent-color: #f5f5f0;
+    --text-dark: #2c2c2c;
+    --text-light: #6b6b6b;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botón de música flotante */
+.music-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px var(--shadow);
+}
+
+.music-icon {
+    font-size: 24px;
+    color: var(--white);
+    animation: musicPulse 2s ease-in-out infinite;
+}
+
+.music-btn.playing .music-icon {
+    animation: musicPlay 0.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes musicPlay {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Sección Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #e8e4d9 100%);
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 30px 0;
+    line-height: 1.2;
+}
+
+.name {
+    display: block;
+}
+
+.ampersand {
+    display: block;
+    font-size: 3rem;
+    margin: 20px 0;
+    color: var(--secondary-color);
+}
+
+.tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 30px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow-down {
+    width: 30px;
+    height: 30px;
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(45deg); }
+    40% { transform: translateY(10px) rotate(45deg); }
+    60% { transform: translateY(5px) rotate(45deg); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de historia */
+.story {
+    padding: 80px 20px;
+    background: var(--white);
+    text-align: center;
+}
+
+.story-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección de padres */
+.parents {
+    padding: 80px 20px;
+    background: var(--accent-color);
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.parents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.parent-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.parent-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.parent-separator {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 10px 0;
+}
+
+/* Sección de fecha */
+.date-section {
+    padding: 80px 20px;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-title-alt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.date-display {
+    margin: 40px 0;
+}
+
+.day {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+}
+
+.full-date {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    letter-spacing: 2px;
+}
+
+/* Contador regresivo */
+.countdown {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #6d5940 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.countdown-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.time-value {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.time-label {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.countdown-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin: 30px 0;
+}
+
+.invitation-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    color: var(--secondary-color);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--white);
+    border: 2px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: transparent;
+    color: #25D366;
+}
+
+.btn-link {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-size: 0.9rem;
+    padding: 10px 25px;
+}
+
+.btn-link:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.whatsapp-icon {
+    margin-right: 8px;
+}
+
+/* Detalles del evento */
+.event-details {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.ceremony {
+    background: var(--accent-color);
+}
+
+.reception {
+    background: var(--white);
+}
+
+.event-time {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 20px 0;
+}
+
+.venue-address {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin: 20px 0 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Itinerario */
+.itinerary {
+    padding: 80px 20px;
+    background: var(--white);
+    text-align: center;
+}
+
+.timeline {
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: 3px solid var(--white);
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--accent-color);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow);
+}
+
+.timeline-content h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Confirmación */
+.confirmation {
+    padding: 80px 20px;
+    background: var(--accent-color);
+    text-align: center;
+}
+
+.confirmation-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin: 30px 0;
+}
+
+/* Información adicional */
+.additional-info {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: var(--accent-color);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: var(--secondary-color);
+}
+
+.footer-date {
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .names {
+        font-size: 3rem;
+    }
+
+    .ampersand {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .day {
+        font-size: 2rem;
+    }
+
+    .full-date {
+        font-size: 1.3rem;
+    }
+
+    .time-value {
+        font-size: 2rem;
+    }
+
+    .countdown-timer {
+        gap: 15px;
+    }
+
+    .time-unit {
+        min-width: 60px;
+    }
+
+    .venue-name {
+        font-size: 1.8rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+
+    .music-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .music-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .names {
+        font-size: 2.5rem;
+    }
+
+    .story-text {
+        font-size: 1.1rem;
+    }
+
+    .parent-name {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
