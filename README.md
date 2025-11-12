@@ -103,12 +103,12 @@ Incluye:
 
 ## 🎬 Equipo y Consideraciones
 
-### Equipo Requerido
-- 📹 Cámara principal
-- 📹 Cámara secundaria
+### Equipo Disponible
+- 📹 1 Cámara de video
+- 📷 1 Cámara de foto
 - 🚁 Dron para tomas aéreas
-- 🎤 Micrófonos inalámbricos
-- 💡 Iluminación portátil y reflectores
+- 🎤 Micrófono inalámbrico
+- 💡 Flashes
 - 🔋 Baterías de respaldo
 
 ### Restricciones Importantes
