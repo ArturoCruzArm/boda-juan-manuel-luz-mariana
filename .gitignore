@@ -1,0 +1,23 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Archivos grandes (opcional - descomentar si no quieres subir música/videos grandes)
+# music/*.mp3
+# music/*.wav
+# videos/*.mp4
