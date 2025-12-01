@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Script para generar automáticamente la lista de fotos en selector.js
+Script para generar automaticamente la lista de fotos en selector.js
 Uso: python generar_lista_fotos.py
 
 Este script:
@@ -13,21 +14,21 @@ import os
 import re
 from pathlib import Path
 
-# Configuración
+# Configuracion
 IMAGES_DIR = "images"
 SELECTOR_JS = "js/selector.js"
 SUPPORTED_FORMATS = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.JPG', '.JPEG', '.PNG', '.WEBP', '.GIF'}
 
 def find_images(directory):
     """
-    Encuentra todas las imágenes en el directorio especificado.
+    Encuentra todas las imagenes en el directorio especificado.
     Retorna una lista ordenada de rutas relativas.
     """
     images = []
 
     if not os.path.exists(directory):
-        print(f"⚠️  El directorio '{directory}' no existe.")
-        print(f"   Creando directorio...")
+        print(f"[WARN] El directorio '{directory}' no existe.")
+        print(f"       Creando directorio...")
         os.makedirs(directory, exist_ok=True)
         return images
 
@@ -39,22 +40,22 @@ def find_images(directory):
                 rel_path = os.path.join(root, file).replace('\\', '/')
                 images.append(rel_path)
 
-    # Ordenar las imágenes
+    # Ordenar las imagenes
     images.sort()
 
     return images
 
 def format_photos_array(images):
     """
-    Formatea la lista de imágenes como array de JavaScript.
+    Formatea la lista de imagenes como array de JavaScript.
     """
     if not images:
-        return "const photos = [\n    // Las fotos se listarán aquí automáticamente\n    // Ejemplo: 'images/foto001.jpg', 'images/foto002.jpg', etc.\n];"
+        return "const photos = [\n    // Las fotos se listaran aqui automaticamente\n    // Ejemplo: 'images/foto001.jpg', 'images/foto002.jpg', etc.\n];"
 
     lines = ["const photos = ["]
 
     for i, img in enumerate(images):
-        # Agregar coma excepto en el último elemento
+        # Agregar coma excepto en el ultimo elemento
         comma = "," if i < len(images) - 1 else ""
         lines.append(f"    '{img}'{comma}")
 
@@ -67,7 +68,7 @@ def update_selector_js(photos_array):
     Actualiza el archivo selector.js con la nueva lista de fotos.
     """
     if not os.path.exists(SELECTOR_JS):
-        print(f"❌ Error: El archivo '{SELECTOR_JS}' no existe.")
+        print(f"[ERROR] El archivo '{SELECTOR_JS}' no existe.")
         return False
 
     # Leer el archivo actual
@@ -79,7 +80,7 @@ def update_selector_js(photos_array):
     pattern = r'const photos = \[[\s\S]*?\];'
 
     if not re.search(pattern, content):
-        print(f"❌ Error: No se encontró el array 'photos' en {SELECTOR_JS}")
+        print(f"[ERROR] No se encontro el array 'photos' en {SELECTOR_JS}")
         return False
 
     # Reemplazar
@@ -93,7 +94,7 @@ def update_selector_js(photos_array):
 
 def main():
     """
-    Función principal del script.
+    Funcion principal del script.
     """
     print("=" * 60)
     print("  GENERADOR DE LISTA DE FOTOS")
@@ -101,51 +102,51 @@ def main():
     print("=" * 60)
     print()
 
-    # Buscar imágenes
-    print(f"🔍 Buscando imágenes en '{IMAGES_DIR}'...")
+    # Buscar imagenes
+    print(f"[INFO] Buscando imagenes en '{IMAGES_DIR}'...")
     images = find_images(IMAGES_DIR)
 
     if not images:
-        print(f"⚠️  No se encontraron imágenes en '{IMAGES_DIR}'")
+        print(f"[WARN] No se encontraron imagenes en '{IMAGES_DIR}'")
         print()
-        print("📝 Instrucciones:")
+        print("[INFO] Instrucciones:")
         print(f"   1. Coloca tus fotos en el directorio '{IMAGES_DIR}/'")
         print(f"   2. Formatos soportados: {', '.join(SUPPORTED_FORMATS)}")
         print(f"   3. Ejecuta este script nuevamente")
         print()
 
-        # Aún así actualizar el archivo con array vacío
+        # Aun asi actualizar el archivo con array vacio
         photos_array = format_photos_array([])
         if update_selector_js(photos_array):
-            print(f"✅ Archivo '{SELECTOR_JS}' actualizado (sin fotos)")
+            print(f"[OK] Archivo '{SELECTOR_JS}' actualizado (sin fotos)")
         return
 
-    print(f"✅ Se encontraron {len(images)} imágenes")
+    print(f"[OK] Se encontraron {len(images)} imagenes")
     print()
 
     # Mostrar algunas fotos de ejemplo
-    print("📸 Primeras 5 fotos encontradas:")
+    print("[INFO] Primeras 5 fotos encontradas:")
     for i, img in enumerate(images[:5], 1):
         print(f"   {i}. {img}")
 
     if len(images) > 5:
-        print(f"   ... y {len(images) - 5} más")
+        print(f"   ... y {len(images) - 5} mas")
     print()
 
     # Generar array de JavaScript
     photos_array = format_photos_array(images)
 
     # Actualizar selector.js
-    print(f"💾 Actualizando '{SELECTOR_JS}'...")
+    print(f"[INFO] Actualizando '{SELECTOR_JS}'...")
     if update_selector_js(photos_array):
-        print(f"✅ ¡Listo! El selector ha sido actualizado con {len(images)} fotos")
+        print(f"[OK] Listo! El selector ha sido actualizado con {len(images)} fotos")
         print()
-        print("🌐 Próximos pasos:")
+        print("[NEXT] Proximos pasos:")
         print("   1. Abre selector.html en tu navegador")
-        print("   2. Selecciona las fotos para ampliación, impresión, etc.")
+        print("   2. Selecciona las fotos para ampliacion, impresion, etc.")
         print("   3. Descarga el reporte JSON con tus selecciones")
     else:
-        print("❌ Error al actualizar el archivo")
+        print("[ERROR] Error al actualizar el archivo")
 
     print()
     print("=" * 60)
