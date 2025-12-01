@@ -4,6 +4,13 @@
 // NOTA: Esta lista se generará automáticamente cuando se suban las fotos
 // Puedes usar el script generar_lista_fotos.py para actualizarla
 const photos = [
+    'images/DJI_20251122131024_0144_D.webp',
+    'images/DJI_20251122131029_0145_D.webp',
+    'images/DJI_20251122131045_0146_D.webp',
+    'images/DJI_20251122131046_0147_D.webp',
+    'images/DJI_20251122131137_0148_D.webp',
+    'images/DJI_20251122171005_0169_D.webp',
+    'images/DJI_20251122171007_0170_D.webp',
     'images/DSC_4419.webp',
     'images/DSC_4422.webp',
     'images/DSC_4423.webp',
