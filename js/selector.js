@@ -4,6 +4,8 @@
 // NOTA: Esta lista se generará automáticamente cuando se suban las fotos
 // Puedes usar el script generar_lista_fotos.py para actualizarla
 const photos = [
+    'youtube:wwsLq4HkTHs', // Película del evento - Primera parte
+    'youtube:KpS46Cr_qu8', // Película del evento - Segunda parte
     'images/DJI_20251122131024_0144_D.webp',
     'images/DJI_20251122131029_0145_D.webp',
     'images/DJI_20251122131045_0146_D.webp',
@@ -863,6 +865,25 @@ function clearAllSelections() {
 }
 
 // ========================================
+// HELPER FUNCTIONS
+// ========================================
+function isYouTubeVideo(item) {
+    return item.startsWith('youtube:');
+}
+
+function getYouTubeId(item) {
+    return item.replace('youtube:', '');
+}
+
+function getYouTubeThumbnail(videoId) {
+    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+}
+
+function getYouTubeEmbedUrl(videoId) {
+    return `https://www.youtube.com/embed/${videoId}`;
+}
+
+// ========================================
 // STATS FUNCTIONS
 // ========================================
 function getStats() {
@@ -943,11 +964,33 @@ function renderGallery() {
             badgesHTML += '</div>';
         }
 
+        // Determine if it's a YouTube video or image
+        const isVideo = isYouTubeVideo(photo);
+        const displayNumber = isVideo ? `Video ${index + 1}` : `Foto ${index + 1}`;
+
+        let mediaHTML;
+        if (isVideo) {
+            const videoId = getYouTubeId(photo);
+            const thumbnail = getYouTubeThumbnail(videoId);
+            mediaHTML = `
+                <div class="photo-image-container video-container">
+                    <img src="${thumbnail}" alt="${displayNumber}" loading="lazy">
+                    <div class="video-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            mediaHTML = `
+                <div class="photo-image-container">
+                    <img src="${photo}" alt="${displayNumber}" loading="lazy">
+                </div>
+            `;
+        }
+
         card.innerHTML = `
-            <div class="photo-image-container">
-                <img src="${photo}" alt="Foto ${index + 1}" loading="lazy">
-            </div>
-            <div class="photo-number">Foto ${index + 1}</div>
+            ${mediaHTML}
+            <div class="photo-number">${displayNumber}</div>
             ${badgesHTML}
         `;
 
@@ -1026,11 +1069,35 @@ function updateFilterButtons() {
 function openModal(index) {
     currentPhotoIndex = index;
     const modal = document.getElementById('photoModal');
-    const modalImage = document.getElementById('modalImage');
+    const modalImageContainer = document.querySelector('.modal-image-container');
     const modalPhotoNumber = document.getElementById('modalPhotoNumber');
 
-    modalImage.src = photos[index];
-    modalPhotoNumber.textContent = `Foto ${index + 1}`;
+    const photo = photos[index];
+    const isVideo = isYouTubeVideo(photo);
+    const displayNumber = isVideo ? `Video ${index + 1}` : `Foto ${index + 1}`;
+
+    modalPhotoNumber.textContent = displayNumber;
+
+    // Clear previous content and add new media
+    if (isVideo) {
+        const videoId = getYouTubeId(photo);
+        const embedUrl = getYouTubeEmbedUrl(videoId);
+        modalImageContainer.innerHTML = `
+            <iframe id="modalImage"
+                src="${embedUrl}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width: 100%; height: 100%; max-height: 70vh;">
+            </iframe>
+            <div class="modal-photo-number" id="modalPhotoNumber">${displayNumber}</div>
+        `;
+    } else {
+        modalImageContainer.innerHTML = `
+            <img id="modalImage" src="${photo}" alt="${displayNumber}">
+            <div class="modal-photo-number" id="modalPhotoNumber">${displayNumber}</div>
+        `;
+    }
 
     // Load current selections
     const selection = photoSelections[index] || {};
