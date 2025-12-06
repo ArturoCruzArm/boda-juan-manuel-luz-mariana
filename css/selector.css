@@ -445,7 +445,7 @@ body {
 .modal-content {
     background: white;
     border-radius: 20px;
-    max-width: 900px;
+    max-width: 1200px;
     width: 95%;
     max-height: 90vh;
     overflow-y: auto;
@@ -507,11 +507,12 @@ body {
 /* YouTube iframe styles */
 .youtube-iframe {
     width: 100%;
-    min-height: 400px;
-    height: 60vh;
-    max-height: 600px;
+    min-height: 500px;
+    height: 70vh;
+    max-height: 800px;
     border-radius: 12px;
     box-shadow: var(--shadow);
+    aspect-ratio: 16/9;
 }
 
 .modal-photo-number {
@@ -939,9 +940,9 @@ body {
     }
 
     .youtube-iframe {
-        min-height: 250px;
-        height: 40vh;
-        max-height: 400px;
+        min-height: 300px;
+        height: 50vh;
+        max-height: 500px;
         border-radius: 8px;
     }
 
@@ -1060,8 +1061,8 @@ body {
     }
 
     .youtube-iframe {
-        height: 80vh;
-        max-height: 400px;
+        height: 85vh;
+        max-height: 500px;
     }
 }
 
