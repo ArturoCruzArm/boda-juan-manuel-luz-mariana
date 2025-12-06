@@ -1088,7 +1088,7 @@ function openModal(index) {
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-                style="width: 100%; height: 100%; max-height: 70vh;">
+                class="youtube-iframe">
             </iframe>
             <div class="modal-photo-number" id="modalPhotoNumber">${displayNumber}</div>
         `;
