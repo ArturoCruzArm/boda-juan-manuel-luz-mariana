@@ -1933,18 +1933,3 @@ window.addEventListener('beforeunload', (e) => {
 
 // ========================================
 // DISABLE RIGHT CLICK ON IMAGES
-// ========================================
-document.addEventListener('contextmenu', (e) => {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-    }
-});
-
-// Disable drag on images
-document.addEventListener('dragstart', (e) => {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-    }
-});
