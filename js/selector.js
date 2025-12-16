@@ -1674,17 +1674,73 @@ function openModal(index) {
 }
 
 function closeModal() {
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
     const modal = document.getElementById('photoModal');
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
     modal.classList.remove('active');
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
     document.body.style.overflow = 'auto';
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
     currentPhotoIndex = null;
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
 }
-// ========================================// NAVIGATION FUNCTIONS// ========================================function navigatePhoto(direction) {    if (currentPhotoIndex === null) return;        let newIndex;    if (direction === "next") {        newIndex = currentPhotoIndex + 1;        if (newIndex >= photos.length) {            newIndex = 0;        }    } else if (direction === "prev") {        newIndex = currentPhotoIndex - 1;        if (newIndex < 0) {            newIndex = photos.length - 1;        }    }        saveCurrentSelections();    openModal(newIndex);}function saveCurrentSelections() {    if (currentPhotoIndex === null) return;        const selectedCategories = {};    let hasAnySelection = false;        document.querySelectorAll(".option-btn").forEach(btn => {        const category = btn.dataset.category;        const isSelected = btn.classList.contains("selected");        selectedCategories[category] = isSelected;        if (isSelected) hasAnySelection = true;    });        if (hasAnySelection) {        photoSelections[currentPhotoIndex] = selectedCategories;    } else {        delete photoSelections[currentPhotoIndex];    }        saveSelections();    updateStats();    updateFilterButtons();}function updateNavigationButtons() {    const btnPrev = document.getElementById("btnPrevPhoto");    const btnNext = document.getElementById("btnNextPhoto");        if (btnPrev && btnNext) {        btnPrev.disabled = false;        btnNext.disabled = false;    }}
+
+// ========================================
+// NAVIGATION FUNCTIONS
+// ========================================
+function navigatePhoto(direction) {
+    if (currentPhotoIndex === null) return;
+
+    let newIndex;
+    if (direction === "next") {
+        newIndex = currentPhotoIndex + 1;
+        if (newIndex >= photos.length) {
+            newIndex = 0;
+        }
+    } else if (direction === "prev") {
+        newIndex = currentPhotoIndex - 1;
+        if (newIndex < 0) {
+            newIndex = photos.length - 1;
+        }
+    }
+
+    saveCurrentSelections();
+    openModal(newIndex);
+}
+
+function saveCurrentSelections() {
+    if (currentPhotoIndex === null) return;
+
+    const selectedCategories = {};
+    let hasAnySelection = false;
+
+    document.querySelectorAll(".option-btn").forEach(btn => {
+        const category = btn.dataset.category;
+        const isSelected = btn.classList.contains("selected");
+        selectedCategories[category] = isSelected;
+        if (isSelected) hasAnySelection = true;
+    });
+
+    if (hasAnySelection) {
+        photoSelections[currentPhotoIndex] = selectedCategories;
+    } else {
+        delete photoSelections[currentPhotoIndex];
+    }
+
+    saveSelections();
+    updateStats();
+    updateFilterButtons();
+}
+
+function updateNavigationButtons() {
+    const btnPrev = document.getElementById("btnPrevPhoto");
+    const btnNext = document.getElementById("btnNextPhoto");
+
+    if (btnPrev && btnNext) {
+        btnPrev.disabled = false;
+        btnNext.disabled = false;
+    }
+}
 
 function saveModalSelection() {
     if (currentPhotoIndex === null) return;
@@ -1895,8 +1951,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') {
                 closeModal();
             } else if (e.key === 'Enter') {
-} else if (e.key === 'ArrowLeft') {                navigatePhoto('prev');            } else if (e.key === 'ArrowRight') {                navigatePhoto('next');
                 saveModalSelection();
+            } else if (e.key === 'ArrowLeft') {
+                navigatePhoto('prev');
+            } else if (e.key === 'ArrowRight') {
+                navigatePhoto('next');
             }
         }
     });
